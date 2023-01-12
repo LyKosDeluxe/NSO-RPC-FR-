@@ -98,7 +98,7 @@ chmod +x install.sh
 
 *(Make sure you have `python3` and `pip` installed)
 
-<h2 id = 'understanding'>Understanding</h2>
+<h2 id = 'understanding'>Comprendre le fonctionnement...</h2>
 
 This is going to be a detailed explanation on everything that I do here and exactly what is going on. If you're into that sort of stuff, keep reading. If not, feel free to skim and get a general idea of the procedures.  
 I try my best to be detailed and give a proper comprehensive guide, but I'm not perfect. Feel free to make an [issue](https://github.com/MCMi460/NSO-RPC/issues) if you feel anything in particular should be updated!
