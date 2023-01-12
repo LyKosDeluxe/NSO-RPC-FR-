@@ -3,8 +3,8 @@
 *Affiche ton statut de jeu sur Discord !*
 
 Les trucs à lire:
-  - [The quickstart guide](#quick)
-  - [In-depth guide](#depth)
+  - [Le guide de démarrage](#quick)
+  - [Profondeurs...](#depth)
 
 ### Credits
 
@@ -46,7 +46,7 @@ Une fois l'appli ouverte, elle vous demandera de vous connectez à votre compte 
 
 ## FAQ
 
-> If none of the below Qs and As help with your problem, feel free to [file an issue](https://github.com/MCMi460/NSO-RPC/issues/new). Alternatively, you can join the [NSO-RPC Discord server](https://discord.gg/pwFASr2NKx) for a better back-and-forth method of communication with me!
+> Si y'a un truc qui marche pas ou qui ne réponds pas à vos questions, n'hésitez pas à [remonter un problème](https://github.com/MCMi460/NSO-RPC/issues/new). Sinon, vous pouvez rejoindre le [Discord NSO-RPC](https://discord.gg/pwFASr2NKx) pour communiquer plus simplement avec nous !
 
 ***Q: Y'a t-il besoin d'avoir un abonnement Nintendo Switch Online ?***  
 **A:** Non.
@@ -66,17 +66,17 @@ Une fois l'appli ouverte, elle vous demandera de vous connectez à votre compte 
 ***Q: Est-ce que j'ai besoin d'avoir Discord ouvert sur mon PC?***  
 **A:** Oui. Discord doit-être lancé sur l'ordinateur qui possède NSO-RPC, pas besoin de vos identifiants Discord, même pas besoin d'avoir la fenêtre Discord active !
 
-***Q: I can't get the program to run, what's wrong with it?!***  
-**A:** Delete the NSO-RPC folder in your Documents folder. If that doesn't work, you should run the [cli.py][cli] program and get the error data, then make an [issue](https://github.com/MCMi460/NSO-RPC/issues) on Github and I'll investigate it.
+***Q: J'arrive pas à ouvrir l'appli, c'est quoi cette merde ?!***  
+**A:** Parle-mieux et supprime le dossier NSO-RPC dans le dossier Documents . Si ça marche pas, ouvre le programme [cli.py][cli] et donne-nous le code d'erreur et fait-en une [remontée](https://github.com/MCMi460/NSO-RPC/issues) on Github and I'll investigate it.
 
-***Q: I can't link my Nintendo Account. What do I do?***  
-**A:** Refer to the question above.
+***Q: J'arrive pas à connecter mon compte Nintendo, Que faire?***  
+**A:** Pareil qu'à la précédente question.
 
-*I am not liable for any sort of rate limiting Nintendo may hammer upon your network*
+*On est pas responsable de ce qu'il arrivera à votre compte Nintendo si celui-ci ce prend un coup de Marteau.*
 
-<h1 id = 'depth'>In-depth guide</h1>
+<h1 id = 'depth'>Le guide des profondeurs...</h1>
 
-<h2 id = 'building'>Building</h2>
+<h2 id = 'building'>Le build. (En anglais.)</h2>
 
 For Windows, run
 ```bat
