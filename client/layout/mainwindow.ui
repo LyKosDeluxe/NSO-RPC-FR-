@@ -33,7 +33,7 @@
       </rect>
      </property>
      <property name="text">
-      <string> Right click &quot;Select this account&quot; and copy the link to proceed with linking the account selected to Nintendo Switch Online Rich Presence.</string>
+      <string> Clique droit sur &quot;Sélectionner&quot; et copie le lien dans Nintendo Switch Online Rich Presence pour te connecter.</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -77,7 +77,7 @@
        </rect>
       </property>
       <property name="placeholderText">
-       <string>Paste the URL here!</string>
+       <string>Copie le lien ICI !</string>
       </property>
      </widget>
      <widget class="QComboBox" name="comboBox">
@@ -106,7 +106,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Link an account</string>
+      <string>Se connecter</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -123,7 +123,7 @@
      </property>
      <property name="text">
       <string>
-If you'd like to use this app for Discord Rich Presence purposes, please link an account that is friended with the target account.</string>
+Si tu souhaite utilise cette Appli pour afficher ton statut de jeu sur Discord, tu devras utiliser un compte secondaire qui possède en ami ton compte Principal.</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -233,7 +233,7 @@ If you'd like to use this app for Discord Rich Presence purposes, please link an
         </rect>
        </property>
        <property name="text">
-        <string>Profile</string>
+        <string>Profil</string>
        </property>
       </widget>
      </widget>
@@ -259,7 +259,7 @@ If you'd like to use this app for Discord Rich Presence purposes, please link an
         </rect>
        </property>
        <property name="text">
-        <string>Friend List</string>
+        <string>Liste d'amis</string>
        </property>
       </widget>
      </widget>
@@ -285,7 +285,7 @@ If you'd like to use this app for Discord Rich Presence purposes, please link an
         </rect>
        </property>
        <property name="text">
-        <string>Quit</string>
+        <string>Quitter</string>
        </property>
       </widget>
      </widget>
@@ -311,7 +311,7 @@ If you'd like to use this app for Discord Rich Presence purposes, please link an
         </rect>
        </property>
        <property name="text">
-        <string>Settings</string>
+        <string>Paramètres</string>
        </property>
       </widget>
      </widget>
@@ -394,7 +394,7 @@ If you'd like to use this app for Discord Rich Presence purposes, please link an
         </rect>
        </property>
        <property name="text">
-        <string>Currently Playing</string>
+        <string>En train de jouer</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_11">
@@ -446,7 +446,7 @@ If you'd like to use this app for Discord Rich Presence purposes, please link an
         </rect>
        </property>
        <property name="text">
-        <string>Select Profile</string>
+        <string>Sélectionner ce Profil</string>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_8">
@@ -459,7 +459,7 @@ If you'd like to use this app for Discord Rich Presence purposes, please link an
         </rect>
        </property>
        <property name="text">
-        <string>Revert</string>
+        <string>Réinitialiser</string>
        </property>
       </widget>
      </widget>
@@ -518,7 +518,7 @@ If you'd like to use this app for Discord Rich Presence purposes, please link an
         </rect>
        </property>
        <property name="text">
-        <string>Logout</string>
+        <string>Se déconnecter</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_15">
@@ -531,7 +531,7 @@ If you'd like to use this app for Discord Rich Presence purposes, please link an
         </rect>
        </property>
        <property name="text">
-        <string>Update Status:</string>
+        <string>Mettre à jour le statut:</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_16">
@@ -544,7 +544,7 @@ If you'd like to use this app for Discord Rich Presence purposes, please link an
         </rect>
        </property>
        <property name="text">
-        <string>Dark Mode:</string>
+        <string>Mode sombre:</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_17">
@@ -557,7 +557,7 @@ If you'd like to use this app for Discord Rich Presence purposes, please link an
         </rect>
        </property>
        <property name="text">
-        <string>Start Minimized:</string>
+        <string>Démarrer en arrière plan:</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_19">
@@ -570,7 +570,7 @@ If you'd like to use this app for Discord Rich Presence purposes, please link an
         </rect>
        </property>
        <property name="text">
-        <string>Start on Launch:</string>
+        <string>Lancer au démarrage:</string>
        </property>
       </widget>
      </widget>
