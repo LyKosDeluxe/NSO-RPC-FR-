@@ -1,41 +1,46 @@
 # Nintendo Switch Online Rich Presence
 
-*Display your Nintendo Switch game status on Discord!*
+*Affiche ton statut de jeu sur Discord !*
 
-This README will be split into two sections:
+Les trucs à lire:
   - [The quickstart guide](#quick)
   - [In-depth guide](#depth)
 
 ### Credits
 
-This project uses the Nintendo Switch Online Mobile App API.  
-I'd like to thank:
-- [NintendoSwitchRESTAPI](https://github.com/ZekeSnider/NintendoSwitchRESTAPI) developer(s) (for very useful blueprint designs)
-- [frozenpandaman](https://github.com/frozenpandaman) and his [s2s][s2s] API (he is the reason all of this works)
-- [JoneWang](https://github.com/JoneWang) and his [imink][imink] API. He is crucial to some of the authentication steps performed
-- [blackgear](https://github.com/blackgear)'s [NSOnline_API](https://github.com/blackgear/NSOnline_API) (he was integral to my understanding of `session_token` authentication)
-- [qwerty](https://github.com/qwertyquerty) for his [pypresence](https://github.com/qwertyquerty/pypresence)
-- [samuelthomas2774](https://github.com/samuelthomas2774) for the tremendous amounts of help he provides to this project's issues. Check out his [nxapi here](https://github.com/samuelthomas2774/nxapi)!
-- [anthonybaldwin](https://github.com/anthonybaldwin) for being awesome and helping out this project a ton!
+Ce projet utilise l'API Nintendo Switch Online Mobile App.  
+Des remerciments à :
+- le(s) developpeur(s) de [NintendoSwitchRESTAPI](https://github.com/ZekeSnider/NintendoSwitchRESTAPI) (très cool)
+- [frozenpandaman](https://github.com/frozenpandaman) et son API [s2s][s2s] (c'est le truc qui fait que ça marche)
+- [JoneWang](https://github.com/JoneWang) et sont API [imink][imink]. C'est des trucs important pour l'authentification.
+- [blackgear](https://github.com/blackgear)'s [NSOnline_API](https://github.com/blackgear/NSOnline_API) (C'est lui qui fait tout les trucs à base de `session_token` pour l'authentication)
+- [qwerty](https://github.com/qwertyquerty) pour [pypresence](https://github.com/qwertyquerty/pypresence)
+- [samuelthomas2774](https://github.com/samuelthomas2774) pour l'aide incroyable qui à fournit pour ce  projet, checkez  [nxapi ici](https://github.com/samuelthomas2774/nxapi)!
+- [anthonybaldwin](https://github.com/anthonybaldwin) pour son aide aussi d'incroyable qualité finalement.
+- [LyKøs](https://github.com/LyKosDeluxe) Pour les traductions en Français de tout l'bazar qu'est ce projet finalement, à bon entendeur 🙏
 
-<h1 id = 'quick'>Quickstart Guide</h1>
+<h1 id = 'quick'>Guide de démarrage</h1>
 
-Download the app from the [latest release](https://github.com/MCMi460/NSO-RPC/releases) and run!  
-Once ran, the app will ask for you to log into your Nintendo account on a web browser. There is no malicious code with intent to steal your information, but it's best to [review the code][api] for yourself.
+Téléchargez  [la dernière version](https://github.com/MCMi460/NSO-RPC/releases) et exécutez-là!  
+Une fois l'appli ouverte, elle vous demandera de vous connectez à votre compte Nintendo depuis le navigateur. Y'a pas de mal, on va pas piqué tes codes.. le mieux c'est que tu vérifie [le code source][api] par toi-même.
 
-1. Open Discord and NSO-RPC
+1. Ouvrir Discord & NSO-RPC
 
-  - You will need a secondary account that is friended with your account in order to "Target" the intended profile's presence. Due to changes in Nintendo's API ([#13](https://github.com/MCMi460/NSO-RPC/issues/13)), it is impossible to return a user's self presence, and instead can only send a user's friend list. Therefore, we have implemented a workaround to "Target" other users to provide rich presence information.
+  - t'auras besoin d'un compte secondaire pour "Sélectionner" le profil que tu voudras afficher en statut sur Discord. Du au changement récent de l'API Nintendo ([#13](https://github.com/MCMi460/NSO-RPC/issues/13)), C'est impossible d'extruder ton status du coup on va tout contourner, tu peux créer un nouveau compte Nintendo auquel tu devras ajouter ton compte principal en ami, ou alors si t'as des vrais potos, utiliser leurs comptes ou celui de ta meuf pour te connecter avec dans NSO-RPC.
 
-2. Log in to your Nintendo account when prompted
+2. Connecte-toi avec le compte secondaire
 
-3. Right click on 'Select this account' and press 'Copy Link'
+3. Clic droit sur 'Selectionner' et fait 'Copier l'adresse du lien'
 
 ![link](/resources/link.png)
 
-4. Paste the link in the pop-up's form and click 'Log In'
+4. Copie-le dans NSO-RPC et clique sur 'Se connecter'
 
-5. Control your rich presence from the app and system tray icon
+5. Après t'être connecter, va dans "Liste d'Amis" et sélectionne ton compte Perso/Principal
+
+6. Clique en bas sur "Sélectionner ce profil". NSO-RPC devrait se fermer, relance-le.
+
+7. Essaye. Lance un jeu et regarde si tout fonctionne.
 
 ![display](/resources/display.png)
 
@@ -43,23 +48,23 @@ Once ran, the app will ask for you to log into your Nintendo account on a web br
 
 > If none of the below Qs and As help with your problem, feel free to [file an issue](https://github.com/MCMi460/NSO-RPC/issues/new). Alternatively, you can join the [NSO-RPC Discord server](https://discord.gg/pwFASr2NKx) for a better back-and-forth method of communication with me!
 
-***Q: Do you need a Nintendo Switch Online subscription to use this app?***  
-**A:** No, you do not. This app works whether or not you have access to online services. You will, however, need to link your Nintendo account to your user profile on your Switch.
+***Q: Y'a t-il besoin d'avoir un abonnement Nintendo Switch Online ?***  
+**A:** Non.
 
-***Q: My computer says that this app might have a virus! Does it?***  
-**A:** No. Your computer is saying that because it's a foreign executable file downloaded from the internet, so you should always be cautious about it. If you'd like, you can [build your own `exe`](#building).
+***Q: Mon PC me dis que c'est une app malveillante, que dois-je faire ?***  
+**A:** Sachez que ce n'est pas le cas, si jamais vous avez des doutes, tout le code est public et accessible via ce projet GitHub. Votre PC vous indique que ce fichier n'est pas de confiance car il n'est pas signé par un certificat que Windows connaît. Si vous avez vraiment peur vous pouvez [créer votre propre `exe`](#building).
 
-***Q: You're not stealing my account/data, are you?***  
-**A:** ~~Not me, personally. You'll have to ask [frozenpandaman](https://github.com/frozenpandaman) [(s2s)][s2s] and [@NexusMine (flapg)](https://twitter.com/NexusMine). They are responsible for some of the authentication steps.~~ This project now uses [imink API][imink] to provide for some authentication steps. [Read more here](#understanding), and be weary of any possible theft.
+***Q: Tu n'est pas entrain de voler mes données hein ? Pas vrai ?***  
+**A:** ~~Pas moi, Personnellement. Faut demander à [frozenpandaman](https://github.com/frozenpandaman) [(s2s)][s2s] & [@NexusMine (flapg)](https://twitter.com/NexusMine). C'est eux les responsable de l'authentification.~~ Ce projet utilise [imink API][imink] pour ce qui concerne les étapes d'authentifications. [En savoir Plus ici](#understanding)
 <ul><li><details>
-  <summary><b><i>What if I don't want to use imink?</i></b></summary>
+  <summary><b><i>Et si j'ai pas envie d'utiliser ImInk ?</i></b></summary>
 
-  **A**: It is possible to tweak the code and remove the API calls, then instead only use temporary tokens you have provided for authorization headers. However, this is tedious and completely up to the user to perform- as the tokens expire after 7200 seconds (two hours) and are only obtainable through methods such as [mitmproxy](https://github.com/mitmproxy/mitmproxy)
+  **A**: C'est possible de bidouiller le code et de retirer les requêtes d'API, mais du coup vous utiliserais des jetons d'auth qui durerons 2H environ. Vous pouvez utiliser ce projet [mitmproxy](https://github.com/mitmproxy/mitmproxy) pour vous aider.
 
 </details></li></ul>
 
-***Q: Do I need Discord open on my PC to use this application?***  
-**A:** No. Discord only needs to be open for the rich presence to be active.
+***Q: Est-ce que j'ai besoin d'avoir Discord ouvert sur mon PC?***  
+**A:** Oui. Discord doit-être lancé sur l'ordinateur qui possède NSO-RPC, pas besoin de vos identifiants Discord, même pas besoin d'avoir la fenêtre Discord active !
 
 ***Q: I can't get the program to run, what's wrong with it?!***  
 **A:** Delete the NSO-RPC folder in your Documents folder. If that doesn't work, you should run the [cli.py][cli] program and get the error data, then make an [issue](https://github.com/MCMi460/NSO-RPC/issues) on Github and I'll investigate it.
