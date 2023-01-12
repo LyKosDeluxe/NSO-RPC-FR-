@@ -2,3 +2,4 @@ requests
 pypresence
 pyqt5
 qtwidgets
+charset_normalizer<3.0
