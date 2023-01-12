@@ -41,7 +41,7 @@ if not isScriptBundled:
             import win32com.client
             import winshell
         except:
-            print('Trying to Install required modules: "pypiwin32" and "winshell"\n')
+            print('Essayez de télécharger les modules : "pypiwin32" and "winshell"\n')
             os.system(" ".join([sys.executable, "-m pip install pypiwin32 winshell"]))
         from win32com.client import Dispatch
         from winshell import Shortcut
@@ -346,7 +346,7 @@ class GUI(Ui_MainWindow):
             user_lang = self.comboBox.currentText()
             client.createCTX(session_token, user_lang, None, version)
         except Exception as e:
-            print(log(f'An error occurred! Chances are, you didn\'t paste the right link, but here\'s the error message:\n{e}'))
+            print(log(f'Y\'a une couille en dirais, essaye de copier le bon lien, mais voici quand même le code d\'erreur:\n{e}'))
             os._exit(1)
 
     def waitUntil(self):
@@ -463,9 +463,9 @@ class GUI(Ui_MainWindow):
             self.presenceText.adjustSize()
             state = user.presence.game.sysDescription
             if not state:
-                state = 'Played for %s hours or more' % (int(user.presence.game.totalPlayTime / 60 / 5) * 5)
+                state = 'À joué %s heures ou plus' % (int(user.presence.game.totalPlayTime / 60 / 5) * 5)
                 if user.presence.game.totalPlayTime / 60 < 5:
-                    state = 'Played for a little while'
+                    state = 'Joue depuis peu'
 
             self.groupBox_7.setCursor(QCursor(Qt.PointingHandCursor))
             self.groupBox_7.mousePressEvent = openLink(user.presence.game.shopUri)
@@ -493,7 +493,7 @@ class GUI(Ui_MainWindow):
             }))
         dlg = QMessageBox()
         dlg.setWindowTitle('NSO-RPC')
-        dlg.setText('You will need to restart the application in order for the changes to take place.\nSorry for the inconvenience.')
+        dlg.setText('Un redémarrage est requis pour appliquer les changements.\nDéso.')
         sys.exit(dlg.exec_())
 
     def setFriendIcons(self, layout):
